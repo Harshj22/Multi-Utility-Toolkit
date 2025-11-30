@@ -13,6 +13,21 @@ def factorial_calculator():
         print("Please enter a valid integer.")
 
 
+def compound_interest():
+    try:
+        principal = float(input("Enter principal amount: "))
+        rate = float(input("Enter rate of interest (in %): "))
+        time = float(input("Enter time (in years): "))
+
+        amount = principal * (1 + rate / 100) ** time
+        ci = amount - principal
+        print("Compound Interest:", round(ci, 2))
+        print("Total Amount:", round(amount, 2))
+
+    except ValueError:
+        print("Please enter valid numeric inputs.")
+
+
 def trigonometry_values():
     angle_text = input("Enter angle in degrees: ")
     try:
